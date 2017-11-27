@@ -10,16 +10,16 @@ namespace JISProject.Engine
         }
 
 
-        public PrimitiveEntry(float Value) : base(EntryTypeOptions.Primitive)
+        public PrimitiveEntry(Decimal? Value) : base(EntryTypeOptions.Primitive)
         {
             this.Value = Value;
         }
 
 
-        public float Value { get; set; }
+        public Decimal? Value { get; set; }
 
 
-        public override float Process()
+        public override Decimal? Process()
         {
             return Value;
         }

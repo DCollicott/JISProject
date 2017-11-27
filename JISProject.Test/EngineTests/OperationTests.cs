@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
- 
+using JISProject.Engine;
+
 
 namespace JISProject.Test.EngineTests
 {
@@ -11,7 +12,13 @@ namespace JISProject.Test.EngineTests
         [Test]
         public void AddTwoNumbers()
         {
-            throw new NotImplementedException();
+            var A = new PrimitiveEntry(23.45m);
+            var B = new PrimitiveEntry(34.56m);
+            var Z = new OperationEntry(A, OperationTypeOptions.Addition, B);
+
+            var Rslt = Z.Process();
+
+            Assert.That(Rslt, Is.EqualTo(58.01m));
         }
 
 

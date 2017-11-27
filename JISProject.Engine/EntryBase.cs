@@ -27,6 +27,6 @@ namespace JISProject.Engine
         }
 
 
-        public abstract float Process();
+        public abstract Decimal? Process();
     }
 }
