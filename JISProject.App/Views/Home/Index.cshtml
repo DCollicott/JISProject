@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<style type="text/css">
+    .CalcButton
+    {
+        width: 40px;
+    }
+</style>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <table>
+        <tr>
+            <td colspan="4">
+                <input id="result" type="text" class="form-control" readonly="readonly" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input id="equation" type="text" class="form-control" readonly="readonly" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="pressSpecial('C');" value="C" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressSpecial('<<');" value="&lt;&lt;" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="" value="" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressOperator('+');" value="+" class="btn CalcButton" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="pressDigit('7');" value="7" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('8');" value="8" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('9');" value="9" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressOperator('-');" value="-" class="btn CalcButton" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="pressDigit('4');" value="4" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('5');" value="5" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('6');" value="6" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressOperator('*');" value="*" class="btn CalcButton" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="pressDigit('1');" value="1" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('2');" value="2" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('3');" value="3" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressOperator('/');" value="/" class="btn CalcButton" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="" value="" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('0');" value="0" class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressDigit('.');" value="." class="btn CalcButton" />
+            </td>
+            <td>
+                <input type="button" onclick="pressOperator('=');" value="=" class="btn CalcButton" />
+            </td>
+        </tr>
+    </table>
+}
+
+
+<script type="text/javascript">
+    var equation = '';
+
+    function pressDigit(c) {
+        equation += c;
+
+        updateEquation();
+    }
+
+
+    function pressOperator(c) {
+        if (c == '=')
+            $("form").submit();
+        else
+            equation += ' ' + c + ' ';
+
+        updateEquation();
+    }
+
+
+    function pressSpecial(c) {
+        switch (c) {
+            case 'C':
+                equation = '';
+                break;
+            case '<<':
+                if (equation != '')
+                    equation = equation.substring(0, equation.length - 1);
+                break;
+        }
+
+        updateEquation();
+    }
+
+
+    function updateEquation() {
+        $("#equation").val(equation);
+    }
+</script>

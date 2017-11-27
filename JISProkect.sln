@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JISProject.Test", "JISProje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JISProject.Engine", "JISProject.Engine\JISProject.Engine.csproj", "{CD2F928D-D4CE-475A-B996-0E0FDC23E59B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JISProject.App", "JISProject.App\JISProject.App.csproj", "{007F3E90-0B52-4813-B6CD-D457256B0772}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CD2F928D-D4CE-475A-B996-0E0FDC23E59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD2F928D-D4CE-475A-B996-0E0FDC23E59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD2F928D-D4CE-475A-B996-0E0FDC23E59B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{007F3E90-0B52-4813-B6CD-D457256B0772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{007F3E90-0B52-4813-B6CD-D457256B0772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{007F3E90-0B52-4813-B6CD-D457256B0772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{007F3E90-0B52-4813-B6CD-D457256B0772}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
