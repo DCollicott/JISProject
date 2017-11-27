@@ -5,14 +5,23 @@ namespace JISProject.Engine
 {
     public class PrimitiveEntry : EntryBase
     {
-        public PrimitiveEntry(EntryTypeOptions EntryType) : base(EntryTypeOptions.Primitive)
+        public PrimitiveEntry() : base(EntryTypeOptions.Primitive)
         {
         }
 
 
+        public PrimitiveEntry(float Value) : base(EntryTypeOptions.Primitive)
+        {
+            this.Value = Value;
+        }
+
+
+        public float Value { get; set; }
+
+
         public override float Process()
         {
-            throw new NotImplementedException();
+            return Value;
         }
     }
 }

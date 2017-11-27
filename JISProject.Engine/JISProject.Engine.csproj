@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryBase.cs" />
-    <Compile Include="EntryTypeOptions.cs" />
     <Compile Include="OperationEntry.cs" />
+    <Compile Include="OperationTypeOptions.cs" />
     <Compile Include="PrimitiveEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

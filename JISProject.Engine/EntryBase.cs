@@ -5,14 +5,28 @@ namespace JISProject.Engine
 {
     public abstract class EntryBase
     {
-        public EntryTypeOptions EntryType { get; private set; }
+        protected enum EntryTypeOptions
+        {
+            Primitive,
+            Operation
+        }
 
-        public abstract float Process();
+
+        protected EntryTypeOptions EntryType { get; private set; }
 
 
-        public EntryBase(EntryTypeOptions EntryType)
+
+        protected EntryBase(EntryTypeOptions EntryType)
         {
             this.EntryType = EntryType;
         }
+
+
+        public EntryBase()
+        {
+        }
+
+
+        public abstract float Process();
     }
 }
