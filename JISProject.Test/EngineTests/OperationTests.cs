@@ -9,28 +9,28 @@ namespace JISProject.Test.EngineTests
     public class OperationTests
     {
         [Test]
-        public void AdditionTest()
+        public void AddTwoNumbers()
         {
             throw new NotImplementedException();
         }
 
 
         [Test]
-        public void SubtractionTest()
+        public void SubtractionTwoNumbers()
         {
             throw new NotImplementedException();
         }
 
 
         [Test]
-        public void MultiplicationTest()
+        public void MultiplyTwoNumbers()
         {
             throw new NotImplementedException();
         }
 
 
         [Test]
-        public void DivisionTest()
+        public void DivideTwoNumbers()
         {
             throw new NotImplementedException();
         }
