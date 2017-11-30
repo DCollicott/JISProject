@@ -10,6 +10,18 @@ November 29, 2017
 <hr />
 
 <p>
+Greetings.
+</p>
+
+<p>
+This caluclator assignment could have been written completely in the client using Javascript, but your instructions were to make use of C# and MVC as well, and therefore I put some of the processing in the client and some in the C# code. My guess was that you wanted to see both some UI and some back end work. I hope this will be acceoptable to you.
+</p>
+
+<p>
+I used Visual Studio 2015. NuGet was used to load packages (NUnit, Bootstrap, etc). I hope they will simply load for you.
+</p>
+
+<p>
 There are three projects in this solution:
 </p>
 <ul>
