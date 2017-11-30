@@ -61,5 +61,35 @@ namespace JISProject.Engine
 
             return Result;
         }
+
+
+        public override string ToString()
+        {
+            string s;
+
+            s = (EntryA == null ? "" : EntryA.ToString());
+
+            switch (Operation)
+            {
+                case OperationTypeOptions.Addition:
+                    s += (s == "" ? "" : " ") +  "+";
+                    break;
+                case OperationTypeOptions.Subtraction:
+                    s += (s == "" ? "" : " ") + "-";
+                    break;
+                case OperationTypeOptions.Multiplication:
+                    s += (s == "" ? "" : " ") + "*";
+                    break;
+                case OperationTypeOptions.Division:
+                    s += (s == "" ? "" : " ") + "/";
+                    break;
+            }
+
+            s += (EntryB == null ? "" : (s == "" ? "" : " " + EntryB.ToString()));
+
+            return s;
+        }
     }
+
+
 }

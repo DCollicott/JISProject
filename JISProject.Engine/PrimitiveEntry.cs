@@ -23,5 +23,15 @@ namespace JISProject.Engine
         {
             return Value;
         }
+
+
+        public override string ToString()
+        {
+            string s;
+
+            s = (Value == null ? "" : Value.ToString());
+
+            return s;
+        }
     }
 }

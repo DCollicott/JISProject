@@ -1,4 +1,6 @@
-﻿@{
+﻿@model JISProject.App.Models.CalcModel
+
+@{
     ViewBag.Title = "Home";
 }
 
@@ -17,12 +19,12 @@
     <table>
         <tr>
             <td colspan="4">
-                <input id="result" type="text" class="form-control" readonly="readonly" />
+                <input id="result" type="text" class="form-control text-right" readonly="readonly" value="@(Model.Result == null ? "" : Model.Result.ToString())" />
             </td>
         </tr>
         <tr>
             <td colspan="4">
-                <input id="equation" type="text" class="form-control" readonly="readonly" />
+                @Html.TextBoxFor(m => m.Equation, htmlAttributes: new { id = "equation", value="", @class = "form-control text-right", @readonly = "readonly" })
             </td>
         </tr>
         <tr>

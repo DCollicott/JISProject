@@ -28,5 +28,8 @@ namespace JISProject.Engine
 
 
         public abstract Decimal? Process();
+
+
+        public abstract override string ToString();
     }
 }

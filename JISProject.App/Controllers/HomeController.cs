@@ -10,14 +10,19 @@ namespace JISProject.App.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var model = new CalcModel();
+
+            return View(model);
         }
 
 
         [HttpPost]
-        public ActionResult Index(CalcModel Model)
+        [ValidateAntiForgeryToken]
+        public ActionResult Index(CalcModel model)
         {
-            return View();
+            model.Process();
+
+            return View(model);
         }
 
     }
